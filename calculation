@@ -1,0 +1,9 @@
+hypr scale = 100
+column = 6
+mgn = 302
+hvr = 248
+font size = 21
+btn col = black
+active rad = 10
+button rad = 16
+wlogout -b 6 -c 0 -r 0 -m 0 --layout <> --css <> --protocol layer-shell

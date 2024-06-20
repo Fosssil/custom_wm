@@ -12,59 +12,69 @@
         "sway/scratchpad",
         "custom/media"
     ],
-//    "modules-center": [
-//        "hyprland/window"
-//    ],
+    //    "modules-center": [
+    //        "hyprland/window"
+    //    ],
     "modules-right": [
-//        "mpd",
-//        "idle_inhibitor",
-        "pulseaudio",
+        //        "mpd",
+        //        "idle_inhibitor",
+        "pulseaudio#speaker",
+        "pulseaudio#microphone",
         "network",
         "power-profiles-daemon",
-        "cpu",
-        "memory",
-        "temperature",
+        //        "cpu",
+        //        "memory",
+        //        "temperature",
         "backlight",
-//        "keyboard-state",
-//	  "hyprland/language",
+        //        "keyboard-state",
+        //	  "hyprland/language",
         "battery",
-        "battery#bat2",
+        //        "battery#bat2",
         "clock",
+        "bluetooth",
+        "custom/notification",
         "tray"
+
     ],
-
-// Modules configuration
-
-  "clock": {
-    "format": "<span foreground='#ffffff' font='14.5' rise='-1000'> </span>{:%I:%M}",
-    "format-alt": "<span foreground='#ffffff' font='14.5' rise='-1000'> </span>{:%A %B de %Y}",
-    "tooltip-format": "<tt>{calendar}</tt>",
-    "calendar": {
-                "mode"          : "month",
-                "mode-mon-col"  : 3,
-                "on-scroll"     : 1,
-                "on-click-right": "mode",
-                "format": {
-                          "months":     "<span color='#ffead3'><b>{}</b></span>",
-                          "days":       "<span color='#ffffff'><b>{}</b></span>",
-                          "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
-                          "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
-                          "today":      "<span color='#66FBFF'><b><u>{}</u></b></span>"
-                          }
-                },
-    "actions":  {
-                "on-click-right": "mode",
-                "on-click-forward": "tz_up",
-                "on-click-backward": "tz_down",
-                "on-scroll-up": "shift_up",
-                "on-scroll-down": "shift_down"
-                }
-},
-     "hyprland/workspaces": {
-         "disable-scroll": true,
-         "all-outputs": true,
-         "warp-on-scroll": false
-     },
+    // Modules configuration
+    "bluetooth": {
+        "format": " {status}",
+        "format-disabled": "",
+        "format-off": "",
+        "interval": 30,
+        "on-click": "blueman-manager",
+        "format-no-controller": ""
+    },
+    "clock": {
+        "format": "<span foreground='#ffffff' font='14.5' rise='-1000'> </span>{:%I:%M}",
+        "format-alt": "<span foreground='#ffffff' font='14.5' rise='-1000'> </span>{:%A %B de %Y}",
+        "tooltip-format": "<tt>{calendar}</tt>",
+        "calendar": {
+            "mode": "month",
+            "mode-mon-col": 3,
+            "on-scroll": 1,
+            "on-click-right": "mode",
+            "format": {
+                "months": "<span color='#ffead3'><b>{}</b></span>",
+                "days": "<span color='#ffffff'><b>{}</b></span>",
+                "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+                "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+                "today": "<span color='#66FBFF'><b><u>{}</u></b></span>"
+            }
+        },
+        "actions": {
+            "on-click-right": "mode",
+            "on-click-forward": "tz_up",
+            "on-click-backward": "tz_down",
+            "on-scroll-up": "shift_up",
+            "on-scroll-down": "shift_down"
+        }
+    },
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "warp-on-scroll": false
+    },
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
@@ -80,7 +90,10 @@
     "hyprland/scratchpad": {
         "format": "{icon} {count}",
         "show-empty": false,
-        "format-icons": ["", ""],
+        "format-icons": [
+            "",
+            ""
+        ],
         "tooltip": true,
         "tooltip-format": "{app}: {title}"
     },
@@ -121,12 +134,11 @@
         // "icon-size": 21,
         "spacing": 10
     },
-
-//    "clock": {
-        // "timezone": "America/New_York",
-//        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-//        "format-alt": "{:%Y-%m-%d}"
-//    },
+    //    "clock": {
+    // "timezone": "America/New_York",
+    //        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    //        "format-alt": "{:%Y-%m-%d}"
+    //    },
     "cpu": {
         "format": "{usage}% ",
         "tooltip": false
@@ -140,73 +152,127 @@
         "critical-threshold": 80,
         // "format-critical": "{temperatureC}°C {icon}",
         "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", ""]
+        "format-icons": [
+            "",
+            "",
+            ""
+        ]
     },
     "backlight": {
         // "device": "acpi_video1",
         "format": "{percent}% {icon}",
-        "format-icons": ["", "", "", "", "", "", "", "", ""]
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
     },
-
-    	"battery": {
+    "battery": {
         "states": {
-            "good": 95,
-            "warning": 30,
-            "critical": 15
+            "good": 80,
+            "warning": 40,
+            "critical": 20
         },
-        "format":"{icon}  {capacity}%",
+        "interval": 5,
+        "format": "{icon} {capacity}%",
         "format-charging": "{capacity}% ",
         "format-plugged": "{capacity}% ",
         "format-alt": "{icon} {time}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
-        "format-icons": ["", "", "", "", ""]
-	},
-
-
-
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
     "battery#bat2": {
         "bat": "BAT2"
     },
     "power-profiles-daemon": {
-      "format": "{icon}",
-      "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
-     // "tooltip": true,
-      "format-icons": {
-        "default": "",
-        "performance": "",
-        "balanced": "",
-        "power-saver": ""
-      }
+        "format": "{icon}",
+        "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+        // "tooltip": true,
+        "format-icons": {
+            "default": "",
+            "performance": "",
+            "balanced": "",
+            "power-saver": ""
+        }
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "interval": 60,
         "format-wifi": "{essid} ({signalStrength}%)  ",
         "format-ethernet": "{ipaddr}/{cidr}  ",
         "tooltip-format": "{ifname} via {gwaddr}  ",
         "format-linked": "{ifname} (No IP)  ",
-        "format-disconnected": "Disconnected ⚠ ",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "format-disconnected": "Disconnected ⚠ "
+        //      "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
-    "pulseaudio": {
-        "scroll-step": 2, // %, can be a float
-        "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": "\uf466 {icon} {format_source}",
-        "format-muted": "\uf466  {format_source}",
-        "format-source": "{volume}% ",
-        "format-source-muted": " ",
+
+
+    "pulseaudio#speaker": {
+        "format": "{icon} {volume}%",
+        "format-muted": "",
+        "on-click": "pamixer -t",
+        "on-click-right": "pavucontrol",
+        "on-scroll-up": "pamixer -i 5",
+        "on-scroll-down": "pamixer -d 5",
+        "scroll-step": 5,
         "format-icons": {
             "headphone": "",
-            "hands-free": "",
-            "headset": "\uee58",
+            "hands-free": "",
+            "headset": "",
             "phone": "",
             "portable": "",
             "car": "",
-            "default": ["", " ", " "]
-        },
-        "on-click": "pavucontrol"
+            "default": [
+                "",
+                "",
+                ""
+            ]
+        }
     },
+    "pulseaudio#microphone": {
+        "format": "{format_source}",
+        "format-source": " {volume}%",
+        "format-source-muted": "",
+        "on-click": "pamixer --default-source -t",
+        "on-click-right": "pavucontrol",
+        "on-scroll-up": "pamixer --default-source -i 5",
+        "on-scroll-down": "pamixer --default-source -d 5",
+        "scroll-step": 5
+    },
+
+    "custom/notification": {
+"tooltip": false,
+"format": "{icon}",
+"format-icons": {
+"notification": "<span foreground='red'><small><sup>⬤</sup></small></span>",
+"none": " ",
+"dnd-notification": "<span foreground='red'><small><sup>⬤</sup></small></span>",
+"dnd-none": " "
+},
+"return-type": "json",
+"exec-if": "which swaync-client",
+"exec": "swaync-client -swb",
+"on-click": "sleep 0.1 && swaync-client -t -sw",
+"on-click-right": "sleep 0.1 && swaync-client -d -sw",
+"escape": true
+},
+
+
+
+
     "custom/media": {
         "format": "{icon} {}",
         "return-type": "json",
