@@ -19,7 +19,8 @@ window {
 }
 
 button {
-    color: black;
+    color: white;
+    opacity: 0.9;
     background-color: @main-bg;
     outline-style: none;
     border: none;
@@ -40,6 +41,7 @@ button:focus {
 
 button:hover {
     background-color: @wb-hvr-bg;
+/*    color: @main-bg; */
     background-size: 40%;
     border-radius: 10px;
     animation: gradient_f 20s ease-in infinite;
@@ -77,37 +79,37 @@ button:hover#reboot {
 }
 
 #lock {
-    background-image: image(url("$HOME/.config/wlogout/icons/lock_black.png"), url("/usr/share/wlogout/icons/lock.png"), url("/usr/local/share/wlogout/icons/lock.png"));
+    background-image: image(url("$HOME/.config/wlogout/icons/lock_white.png"), url("/usr/share/wlogout/icons/lock.png"), url("/usr/local/share/wlogout/icons/lock.png"));
     border-radius: 16px 0px 0px 16px;
     margin : 302px 0px 302px 302px;
 }
 
 #logout {
-    background-image: image(url("$HOME/.config/wlogout/icons/logout_black.png"), url("/usr/share/wlogout/icons/logout.png"), url("/usr/local/share/wlogout/icons/logout.png"));
+    background-image: image(url("$HOME/.config/wlogout/icons/logout_white.png"), url("/usr/share/wlogout/icons/logout.png"), url("/usr/local/share/wlogout/icons/logout.png"));
     border-radius: 0px 0px 0px 0px;
     margin : 302px 0px 302px 0px;
 }
 
 #suspend {
-    background-image: image(url("$HOME/.config/wlogout/icons/suspend_black.png"), url("/usr/share/wlogout/icons/suspend.png"), url("/usr/local/share/wlogout/icons/suspend.png"));
+    background-image: image(url("$HOME/.config/wlogout/icons/suspend_white.png"), url("/usr/share/wlogout/icons/suspend.png"), url("/usr/local/share/wlogout/icons/suspend.png"));
     border-radius: 0px 0px 0px 0px;
     margin : 302px 0px 302px 0px;
 }
 
 #shutdown {
-    background-image: image(url("$HOME/.config/wlogout/icons/shutdown_black.png"), url("/usr/share/wlogout/icons/shutdown.png"), url("/usr/local/share/wlogout/icons/shutdown.png"));
+    background-image: image(url("$HOME/.config/wlogout/icons/shutdown_white.png"), url("/usr/share/wlogout/icons/shutdown.png"), url("/usr/local/share/wlogout/icons/shutdown.png"));
     border-radius: 0px 0px 0px 0px;
     margin : 302px 0px 302px 0px;
 }
 
 #hibernate {
-    background-image: image(url("$HOME/.config/wlogout/icons/hibernate_black.png"), url("/usr/share/wlogout/icons/hibernate.png"), url("/usr/local/share/wlogout/icons/hibernate.png"));
+    background-image: image(url("$HOME/.config/wlogout/icons/hibernate_white.png"), url("/usr/share/wlogout/icons/hibernate.png"), url("/usr/local/share/wlogout/icons/hibernate.png"));
     border-radius: 0px 0px 0px 0px;
     margin : 302px 0px 302px 0px;
 }
 
 #reboot {
-    background-image: image(url("$HOME/.config/wlogout/icons/reboot_black.png"), url("/usr/share/wlogout/icons/reboot.png"), url("/usr/local/share/wlogout/icons/reboot.png"));
+    background-image: image(url("$HOME/.config/wlogout/icons/reboot_white.png"), url("/usr/share/wlogout/icons/reboot.png"), url("/usr/local/share/wlogout/icons/reboot.png"));
     border-radius: 0px 16px 16px 0px;
     margin : 302px 302px 302px 0px;
 }

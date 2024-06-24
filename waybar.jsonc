@@ -32,8 +32,8 @@
         //        "battery#bat2",
         "clock",
         "bluetooth",
-        "custom/notification",
-        "tray"
+        "tray",
+        "custom/notification"
 
     ],
     // Modules configuration
