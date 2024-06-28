@@ -21,6 +21,7 @@
         "pulseaudio#speaker",
         "pulseaudio#microphone",
         "network",
+//        "network/speed",
         "power-profiles-daemon",
         //        "cpu",
         //        "memory",
@@ -59,7 +60,7 @@
                 "days": "<span color='#ffffff'><b>{}</b></span>",
                 "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
                 "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
-                "today": "<span color='#66FBFF'><b><u>{}</u></b></span>"
+                "today": "<span color='red'><b><u>{}</u></b></span>"
             }
         },
         "actions": {
@@ -160,6 +161,7 @@
     },
     "backlight": {
         // "device": "acpi_video1",
+        "scroll-step": 5,
         "format": "{percent}% {icon}",
         "format-icons": [
             "",
@@ -210,15 +212,32 @@
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "interval": 60,
+        "interval": 1,
         "format-wifi": "{essid} ({signalStrength}%)  ",
         "format-ethernet": "{ipaddr}/{cidr}  ",
-        "tooltip-format": "{ifname} via {gwaddr}  ",
+        "tooltip-format": "{ifname} {gwaddr}/{cidr}",
         "format-linked": "{ifname} (No IP)  ",
-        "format-disconnected": "Disconnected ⚠ "
-        //      "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "format-disconnected": "Disconnected ⚠ ",
+//       "format-alt": "{ifname}: {ipaddr}/{cidr}"
+//        "format-alt": " {bandwidthDownBytes}  {bandwidthUpBytes}"
+        "format-alt": "\uf062 {bandwidthDownBytes} \uf063 {bandwidthUpBytes}"
     },
 
+
+/*"network": {
+"interval": 1,
+"format": "{ifname}",
+"format-wifi": "{icon} {bandwidthDownBytes}  {bandwidthUpBytes} ",
+"format-ethernet": "{icon} {bandwidthDownBytes}  {bandwidthUpBytes} ",
+"format-disconnected": "󰌙",
+"tooltip-format": "{ipaddr}",
+"format-linked": "󰈁 {ifname} (No IP)",
+"tooltip-format-wifi": "{essid} {icon} {signalStrength}%",
+"tooltip-format-ethernet": "{ifname} 󰌘",
+"tooltip-format-disconnected": "󰌙 Disconnected",
+"max-length": 30,
+"format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"]
+}, */
 
     "pulseaudio#speaker": {
         "format": "{icon} {volume}%",
