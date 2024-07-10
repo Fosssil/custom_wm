@@ -1,8 +1,7 @@
-# setup screenshot
-# remove window buttons from firefox
-network speed in waybar
+remove waybar tar and make wifi and bluetooth float, try to make nmcli applet tootgleable in network button 
+some windows open in different worspace solve them
+Improve auto switch to bluetooth audio system
+beautify volume etc. indicators swayosd
 make wlogout beautiful
 setup notifications
-setup eww with waybar
-setup internet speed in waybar
 cutomise rofi, show images etc.
