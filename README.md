@@ -1,5 +1,5 @@
 ## Apps I used:
-- Image viewer = koko, Oculante
+- Image viewer = koko, oculante
 
 
 
