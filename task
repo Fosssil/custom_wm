@@ -1,3 +1,5 @@
+set file transfer size to a little big
+vlc bydefault will open in new workspace
 remove waybar tar and make wifi and bluetooth float, try to make nmcli applet tootgleable in network button 
 some windows open in different worspace solve them
 Improve auto switch to bluetooth audio system
