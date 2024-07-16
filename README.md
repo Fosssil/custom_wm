@@ -2,7 +2,8 @@
 - Image viewer = koko, oculante
 - Glow = terminal md viewer
 - Dolphin = file manager
-- Text Editor = vim 
+- Text Editor = vim
+<br>
 Note: Apps seperated by comma have high priority from left to right
 
 ## TODO:
