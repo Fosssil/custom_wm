@@ -20,3 +20,6 @@ Note: Apps seperated by comma have high priority from left to right
 - [ ] Cutomise rofi, show images etc.
 - [ ] Configure mpv
 - [ ] Use hyprcursor instead of xcursor
+- [ ] Setup wluma -  https://github.com/maximbaz/wluma
+- [ ] Setup wlsunset - https://sr.ht/~kennylevinsen/wlsunset/ 
+- [ ] Setup hyprnome (Maybe) - https://github.com/donovanglover/hyprnome
