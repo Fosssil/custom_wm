@@ -9,6 +9,7 @@ Note: Apps seperated by comma have high priority from left to right
 
 ## TODO:
 - [x] Improve auto switch to bluetooth audio system
+- [ ] Set shortcut to resize windows by mouse
 - [ ] In hyprland - make shortcut to kill waybar and again turn it on [to get extra space for apps]
 - [ ] Set file transfer prompt size to a little big ( one key right and down)
 - [ ] Vlc by default open in new workspace
