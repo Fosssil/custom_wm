@@ -378,12 +378,17 @@ label:focus {
 }
 
 
-#custom-notification {
+/*#custom-notification {
     background-color: #f1c40f;
+    color: #000000;
+} */
+#custom-notification {
+    background-color: #111111;
     color: #000000;
 } 
 
-#custom-notification:hover {
+
+/*#custom-notification:hover {
     background-color: #a37800;
     color: white;
-}
+}*/
