@@ -29,9 +29,11 @@
   "hyprland/window": {
     "format": "{title}",
     "icon": false,
-    "icon-size": 20,
     "max-length": 40,
-    "separate-outputs": true
+    "separate-outputs": true,
+    "rewrite":{
+      "()":"Fossil"
+    }
   },
 
   // Network setup
@@ -130,6 +132,7 @@
       "critical": 20
     },
     "interval": 2,
+    "full-at":79,
     "format": "{icon} {capacity}%",
     "format-charging": "{capacity}% ",
     "format-plugged": "{capacity}% ",
