@@ -15,6 +15,7 @@
     "pulseaudio",
     "backlight",
     "clock",
+    "tray",
     "custom/notification"
   ],
   // Hyprland
@@ -106,6 +107,15 @@
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     "format-alt": "󰨳 {:%d %b %Y}" // 25 Dec 2006
   },
+
+
+
+  "tray": {
+        // "icon-size": 21,
+        "spacing": 10
+    },
+
+    
   "custom/notification": {
     "tooltip": false,
     "format": "{icon}",
@@ -123,33 +133,38 @@
     "on-click-right": "sleep 0.1 && swaync-client -d -sw",
     "escape": true
   },
-  "temperature": {
-    "critical-threshold": 80,
-    "format": "{temperatureC}°C {icon}",
-    "format-icons": [
-      "",
-      "",
-      ""
-    ]
-  },
-  // Hardware info
-  "group/hardware": {
-    "orientation": "horizontal",
-    "modules": [
-      "disk",
-      "cpu",
-      "memory"
-    ]
-  },
-  "disk": {
-    "format": "{percentage_used}%  ",
-    "path": "/home"
-  },
-  "cpu": {
-    "format": " {usage}%  ",
-    "tooltip": false
-  },
-  "memory": {
-    "format": " {}%  "
-  }
-}
+  
+  
+  //
+  // EXTRAS
+  //
+//  "temperature": {
+//    "critical-threshold": 80,
+//    "format": "{temperatureC}°C {icon}",
+//    "format-icons": [
+//      "",
+//      "",
+//      ""
+//    ]
+//  },
+//  // Hardware info
+//  "group/hardware": {
+//    "orientation": "horizontal",
+//    "modules": [
+//      "disk",
+//      "cpu",
+//      "memory"
+//    ]
+//  },
+//  "disk": {
+//    "format": "{percentage_used}%  ",
+//    "path": "/home"
+//  },
+//  "cpu": {
+//    "format": " {usage}%  ",
+//    "tooltip": false
+//  },
+//  "memory": {
+//    "format": " {}%  "
+//  }
+//}

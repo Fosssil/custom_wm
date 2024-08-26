@@ -23,6 +23,7 @@ tooltip {
 #taskbar,
 #battery,
 #backlight,
+#tray,
 #custom-notification,
 #window,
 #workspaces {
@@ -75,6 +76,7 @@ tooltip {
 #backlight,
 #battery,
 #clock,
+#tray,
 #window {
     border: 2px solid;
     border-color: #ffffff;
