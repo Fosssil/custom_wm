@@ -19,11 +19,13 @@ tooltip {
 #hardware,
 #network,
 #workspaces,
-#pulseaudio,
 #taskbar,
+#pulseaudio,
+#pulseaudio.speaker,
+/* #pulseaudio.microphone, */
 #battery,
 #backlight,
-#tray,
+#bluetooth,
 #custom-notification,
 #window,
 #workspaces {
@@ -73,10 +75,12 @@ tooltip {
 
 #network,
 #pulseaudio,
+#pulseaudio.speaker,
+/* #pulseaudio.microphone, */
 #backlight,
+#bluetooth,
 #battery,
 #clock,
-#tray,
 #window {
     border: 2px solid;
     border-color: #ffffff;
@@ -84,6 +88,18 @@ tooltip {
     padding-right: 8px;
     background-color: rgba(0, 0, 0, 0.371);
 }
+
+#pulseaudio.speaker{
+    padding-right: 16px;
+}
+#pulseaudio.speaker.muted{
+    border-color: #ed0e0e;
+}
+
+/* #pulseaudio.microphone.muted{
+    padding-right: 16px;
+    border-color: #ed0e0e;
+} */
 
 #network.disconnected {
     border: 2px solid;
@@ -98,12 +114,17 @@ tooltip {
 }
 
 #battery.discharging {
-    color: #ffcbcb;
     border: 2px solid;
     border-color: #ed0e0e;
 
 }
 
+@keyframes blink {
+    to {
+      background-color: #ffffff;
+      color: #000000;
+    }
+  }
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
     background-color: #f53c3c;
@@ -119,6 +140,7 @@ tooltip {
 #pulseaudio:hover,
 #backlight:hover,
 #battery:hover,
+#bluetooth:hover,
 #clock:hover,
 #window:hover {
     background-color: rgba(255, 255, 255, 0.485);
@@ -129,9 +151,8 @@ tooltip {
     background-color: rgba(0, 0, 0, 0.371);
     border: 2px solid;
     font-size: 15px;
-    border-color: #ff3333;
-    padding-left: 2px;
-    padding-right: 4px;
+    padding-left: 4px;
+    padding-right: 6px;
 
 }
 

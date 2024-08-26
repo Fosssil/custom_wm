@@ -12,12 +12,14 @@
   "modules-right": [
     "battery",
     "network",
-    "pulseaudio",
+    "bluetooth",
+    "pulseaudio#speaker",
     "backlight",
     "clock",
-    "tray",
     "custom/notification"
   ],
+
+
   // Hyprland
   "hyprland/workspaces": {
     "disable-scroll": true,
@@ -26,47 +28,95 @@
     "warp-on-scroll": false,
     "format": "{icon}"
   },
+
   "hyprland/window": {
     "format": "{title}",
     "icon": false,
     "icon-size": 20,
     "max-length": 30,
-    "separate-outputs": true,
-    "rewrite": {
-      "(.*) - Brave": "$1"
-    }
+    "separate-outputs": true
   },
+
   // Network setup
   "network": {
     "format": "{ifname}",
+    "on-click-right": "nm-applet --no-agent",
     "format-wifi": "{essid} ({signalStrength}%)  ",
     "format-ethernet": "{bandwidthDownBytes}  ",
-    "format-disconnected": "", //An empty format will hide the module.
+    "format-disconnected": "Disconnected ⚠", //An empty format will hide the module.
     "tooltip-format": "{ifname} via {gwaddr} 󰊗",
     "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
     "tooltip-format-ethernet": "{ifname}  ",
     "tooltip-format-disconnected": "Disconnected",
+    "format-alt": "\uf062 {bandwidthDownBytes} \uf063 {bandwidthUpBytes}",
     "max-length": 50,
-    "interval": 2
+    "interval": 1
   },
-  // Audio setup
-  "pulseaudio": {
-    "format": "{volume}% {icon}",
-    "format-bluetooth": "{volume}% {icon} {format_source}",
-    "format-bluetooth-muted": " {icon} {format_source}",
-    "format-muted": " 󰝟  {format_source}",
-    "format-source": "{volume}% ",
-    "format-source-muted": "",
-    "format-icons": {
-      "default": [
-        "",
-        " ",
-        " "
-      ]
+
+
+  "bluetooth": {
+	// "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
+	"format": " {status}",
+	"format-disabled": "", // an empty format will hide the module
+	"format-connected": " {num_connections} connected",
+  "on-click-right": "blueman-manager",
+	"tooltip-format": "{controller_alias}\t{controller_address}",
+	"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+	"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
+},
+
+  // // Audio setup
+  // "pulseaudio": {
+  //   "format": "{volume}% {icon}",
+  //   "format-bluetooth": "{volume}% {icon} {format_source}",
+  //   "format-bluetooth-muted": " {icon} {format_source}",
+  //   "format-muted": " 󰝟  {format_source}",
+  //   "format-source": "{volume}% ",
+  //   "format-source-muted": "",
+  //   "format-icons": {
+  //     "default": [
+  //       "",
+  //       " ",
+  //       " "
+  //     ]
+  //   },
+  //   "max-volume": 100,
+  //   "on-click": "pamixer -t",
+  //   "on-click-right": "pavucontrol"
+  // },
+"pulseaudio#speaker": {
+        "format": "{volume}% {icon} ",
+        "format-muted": "",
+        "on-click": "pamixer -t",
+        "on-click-right": "pavucontrol",
+        "on-scroll-up": "pamixer -i 5",
+        "on-scroll-down": "pamixer -d 5",
+        "scroll-step": 5,
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "default": [
+                "",
+                "",
+                ""
+            ]
+        }
     },
-    "max-volume": 150,
-    "on-click": "pavucontrol"
-  },
+//    "pulseaudio#microphone": {
+//        "format": "{format_source}",
+//        "format-source": "{volume}% ",
+//        "format-source-muted": "",
+//              "on-click": "pamixer --default-source -t",
+//        "on-click-right": "pavucontrol",
+//        "on-scroll-up": "pamixer --default-source -i 5",
+//        "on-scroll-down": "pamixer --default-source -d 5",
+//        "scroll-step": 5
+//    },
+//
+
+
+
   "backlight": {
     "scroll-step": 5,
     "format": "{percent}% {icon}",
@@ -108,14 +158,6 @@
     "format-alt": "󰨳 {:%d %b %Y}" // 25 Dec 2006
   },
 
-
-
-  "tray": {
-        // "icon-size": 21,
-        "spacing": 10
-    },
-
-    
   "custom/notification": {
     "tooltip": false,
     "format": "{icon}",
@@ -132,7 +174,7 @@
     "on-click": "sleep 0.1 && swaync-client -t -sw",
     "on-click-right": "sleep 0.1 && swaync-client -d -sw",
     "escape": true
-  },
+  }
   
   
   //
@@ -167,4 +209,4 @@
 //  "memory": {
 //    "format": " {}%  "
 //  }
-//}
+}
