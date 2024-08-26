@@ -86,20 +86,20 @@ tooltip {
 #network.disconnected {
     border: 2px solid;
     border-color: #f53c3c;
-  }
+}
 
 #battery.charging,
 #battery.plugged {
- border: 3px solid;
- border-color: #5cff56;
-   
+    border: 3px solid;
+    border-color: #5cff56;
+
 }
 
 #battery.discharging {
     color: #ffcbcb;
     border: 2px solid;
     border-color: #ed0e0e;
-    
+
 }
 
 /* Using steps() instead of linear as a timing function to limit cpu usage */
@@ -124,9 +124,13 @@ tooltip {
 }
 
 #custom-notification {
-    padding-left: 8px;
-    padding-right: 4px;
     background-color: rgba(0, 0, 0, 0.371);
+    border: 2px solid;
+    font-size: 15px;
+    border-color: #ff3333;
+    padding-left: 2px;
+    padding-right: 4px;
+
 }
 
 #custom-notification:hover {

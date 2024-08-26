@@ -7,13 +7,13 @@
     "hyprland/workspaces"
   ],
   "modules-center": [
-    "hyprland/window"
+    "hyprland/window",
   ],
   "modules-right": [
+    "battery",
     "network",
     "pulseaudio",
     "backlight",
-    "battery",
     "clock",
     "custom/notification"
   ],
@@ -110,7 +110,8 @@
     "tooltip": false,
     "format": "{icon}",
     "format-icons": {
-      "notification": "<span foreground='red'><small><sup>⬤</sup></small></span>",
+      // "notification": "<span foreground='red'><small><sup>⬤</sup></small></span>",
+      "notification": "\udb80\udd78",
       "none": " ",
       "dnd-notification": "<span foreground='red'><small><sup>⬤</sup></small></span>",
       "dnd-none": " "
