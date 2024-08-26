@@ -76,16 +76,22 @@ tooltip {
 #battery,
 #clock,
 #window {
+    border: 2px solid;
+    border-color: #ffffff;
     padding-left: 8px;
     padding-right: 8px;
     background-color: rgba(0, 0, 0, 0.371);
 }
 
+#network.disconnected {
+    border: 2px solid;
+    border-color: #f53c3c;
+  }
+
 #battery.charging,
 #battery.plugged {
- /* color: #89f7b7;  */
- border: 2px solid;
- border-color: #89f7b7;
+ border: 3px solid;
+ border-color: #5cff56;
    
 }
 
