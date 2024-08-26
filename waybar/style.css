@@ -1,0 +1,93 @@
+* {
+    all: unset;
+    /*this is really important to isolate waybar from gtk*/
+    font-family: "Monospace";
+    font-size: 14px;
+    font-weight: normal;
+}
+
+/* TOOLTIP */
+tooltip {
+    background: rgba(0, 0, 0, 1);
+    border: 1.5px solid #9A4C42;
+    border-radius: 8px;
+    padding: 2px 100px;
+}
+
+/* COMMON CONFIGS */
+#clock,
+#hardware,
+#network,
+#workspaces,
+#pulseaudio,
+#taskbar,
+#battery,
+#backlight,
+#custom-notification,
+#window,
+/* CUSTOM CONFIGS */
+
+/* workspaces */
+#workspaces {
+    background: rgba(0,0, 0, 0.5);
+    margin: 1px 2px;
+    padding: 1px;
+    border-radius: 15px;
+}
+
+#workspaces button {
+    background: rgba(0,0, 0, 0.5);
+    min-width: 20px;
+    margin: 2px;
+    border-radius: 45%;
+    /* circle */
+    transition: all 0.2s ease-in-out;
+    padding: 1px;
+    opacity: 0.6;
+}
+
+#workspaces button:nth-child(first) {
+    padding-left: 0px;
+}
+
+#workspaces button:hover {
+    opacity: 0.8;
+    background: #9f51c6;
+}
+
+#workspaces button.active {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    min-width: 30px;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+    opacity: 0.9;
+}
+
+#workspaces button.urgent {
+    color:#e10a32;
+    transition: all 0.3s ease-in-out;
+}
+
+#cava {
+    background: rgba(0, 0, 0, 1);
+}
+
+#network,#pulseaudio, #backlight, #battery, #clock,#window{
+    padding-left: 8px;
+    padding-right: 8px;
+    background-color: rgba(0, 0, 0, 0.371);
+}
+
+#network:hover,#pulseaudio:hover, #backlight:hover, #battery:hover, #clock:hover,#window:hover{
+    background-color: rgba(217, 245, 9, 0.371);
+}
+#custom-notification{
+    padding-left: 8px;
+    padding-right: 4px;
+    background-color: rgba(0, 0, 0, 0.371);
+}
+
+#custom-notification:hover{
+    background-color: rgba(217, 245, 9, 0.371);
+}
