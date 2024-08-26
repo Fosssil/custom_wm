@@ -9,7 +9,7 @@
 /* TOOLTIP */
 tooltip {
     background: rgba(0, 0, 0, 1);
-    border: 1.5px solid #9A4C42;
+    border: 1.5px solid #9a4c42;
     border-radius: 8px;
     padding: 2px 100px;
 }
@@ -29,14 +29,14 @@ tooltip {
 
 /* workspaces */
 #workspaces {
-    background: rgba(0,0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5);
     margin: 1px 2px;
     padding: 1px;
     border-radius: 15px;
 }
 
 #workspaces button {
-    background: rgba(0,0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5);
     min-width: 20px;
     margin: 2px;
     border-radius: 45%;
@@ -65,7 +65,7 @@ tooltip {
 }
 
 #workspaces button.urgent {
-    color:#e10a32;
+    color: #e10a32;
     transition: all 0.3s ease-in-out;
 }
 
@@ -73,21 +73,52 @@ tooltip {
     background: rgba(0, 0, 0, 1);
 }
 
-#network,#pulseaudio, #backlight, #battery, #clock,#window{
+#network,
+#pulseaudio,
+#backlight,
+#battery,
+#clock,
+#window {
     padding-left: 8px;
     padding-right: 8px;
     background-color: rgba(0, 0, 0, 0.371);
 }
 
-#network:hover,#pulseaudio:hover, #backlight:hover, #battery:hover, #clock:hover,#window:hover{
+#battery.charging,
+#battery.plugged {
+    color: #89f7b7;
+}
+
+#battery.discharging {
+    color: #ff9068;
+}
+
+/* Using steps() instead of linear as a timing function to limit cpu usage */
+#battery.critical:not(.charging) {
+    background-color: #f53c3c;
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#network:hover,
+#pulseaudio:hover,
+#backlight:hover,
+#battery:hover,
+#clock:hover,
+#window:hover {
     background-color: rgba(217, 245, 9, 0.371);
 }
-#custom-notification{
+
+#custom-notification {
     padding-left: 8px;
     padding-right: 4px;
     background-color: rgba(0, 0, 0, 0.371);
 }
 
-#custom-notification:hover{
+#custom-notification:hover {
     background-color: rgba(217, 245, 9, 0.371);
 }
