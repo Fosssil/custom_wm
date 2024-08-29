@@ -168,8 +168,8 @@
       "format": "{icon}",
       "format-icons": {
         // "notification": "<span foreground='red'><small><sup>⬤</sup></small></span>",
-        "notification": "\udb80\udd78",
-        "none": "",
+        "notification": "",
+        "none": "",
         "dnd-notification": "<span foreground='red'><small><sup>⬤</sup></small></span>",
         "dnd-none": " "
       },

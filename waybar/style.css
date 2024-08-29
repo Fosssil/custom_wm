@@ -151,8 +151,8 @@ tooltip {
   background-color: rgba(0, 0, 0, 0.371);
   border: 2px solid;
   font-size: 15px;
-  padding-left: 4px;
-  padding-right: 4px;
+  padding-left: 3px;
+  padding-right: 7px;
 }
 
 #custom-notification:hover {
