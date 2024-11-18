@@ -3,12 +3,8 @@
   "reload_style_on_change": true,
   "width": 1920, // Waybar width
   "spacing": 1, // Gaps between modules (4px)
-  "modules-left": [
-    "hyprland/workspaces"
-  ],
-  "modules-center": [
-    "hyprland/window"
-    ],
+  "modules-left": ["hyprland/workspaces"],
+  //  "modules-center": ["hyprland/window"],
   "modules-right": [
     "battery",
     "network",
@@ -16,7 +12,7 @@
     "pulseaudio#speaker",
     "backlight",
     "clock",
-    "custom/notification"
+    "custom/notification",
   ],
   // Hyprland
   "hyprland/workspaces": {
@@ -24,16 +20,16 @@
     "sort-by": "number",
     "all-outputs": true,
     "warp-on-scroll": false,
-    "format": "{icon}"
+    "format": "{icon}",
   },
   "hyprland/window": {
     "format": "{title}",
     "icon": false,
     "max-length": 40,
     "separate-outputs": true,
-    "rewrite":{
-      "()":"Fossil"
-    }
+    "rewrite": {
+      "()": "Fossil",
+    },
   },
 
   // Network setup
@@ -49,7 +45,7 @@
     "tooltip-format-disconnected": "Disconnected",
     "format-alt": "\uf062 {bandwidthDownBytes} \uf063 {bandwidthUpBytes}",
     "max-length": 50,
-    "interval": 1
+    "interval": 1,
   },
   "bluetooth": {
     // "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
@@ -59,10 +55,10 @@
     "on-click-right": "blueman-manager",
     "tooltip-format": "{controller_alias}\t{controller_address}",
     "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
-    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
   },
 
-// // Audio setup
+  // // Audio setup
   // "pulseaudio": {
   //   "format": "{volume}% {icon}",
   //   "format-bluetooth": "{volume}% {icon} {format_source}",
@@ -93,12 +89,8 @@
       "headphone": "",
       "hands-free": "",
       "headset": "",
-      "default": [
-        "",
-        "",
-        ""
-      ]
-    }
+      "default": ["", "", ""],
+    },
   },
   //    "pulseaudio#microphone": {
   //        "format": "{format_source}",
@@ -114,43 +106,28 @@
   "backlight": {
     "scroll-step": 5,
     "format": "{percent}% {icon}",
-    "format-icons": [
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      ""
-    ]
+    "format-icons": ["", "", "", "", "", "", "", "", ""],
   },
   "battery": {
     "states": {
       "good": 80,
       "warning": 40,
-      "critical": 20
+      "critical": 20,
     },
     "interval": 2,
-    "full-at":79,
+    "full-at": 79,
     "format": "{icon} {capacity}%",
     "format-charging": "{capacity}% ",
     "format-plugged": "{capacity}% ",
     "format-alt": "{icon} {time}",
-    "format-icons": [
-      "",
-      "",
-      "",
-      "",
-      ""
-    ]
+    "format-icons": ["", "", "", "", ""],
   },
   // Clock
   "clock": {
     "format": "󱑂 {:%I:%M}", // 19:28 Mon
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     "format-alt": "󰨳 {:%d %b %Y}", // 25 Dec 2006
+    "timezone": "Asia/Kolkata",
     "calendar": {
       "mode": "month",
       "mode-mon-col": 3,
@@ -159,57 +136,57 @@
         "days": "<span color='#ffffff'><b>{}</b></span>",
         "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
         "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
-        "today": "<span color='red'><b><u>{}</u></b></span>"
-      }
-    }
-  },
-    "custom/notification": {
-      "tooltip": false,
-      "format": "{icon}",
-      "format-icons": {
-        // "notification": "<span foreground='red'><small><sup>⬤</sup></small></span>",
-        "notification": "",
-        "none": "",
-        "dnd-notification": "<span foreground='red'><small><sup>⬤</sup></small></span>",
-        "dnd-none": " "
+        "today": "<span color='red'><b><u>{}</u></b></span>",
       },
-      "return-type": "json",
-      "exec-if": "which swaync-client",
-      "exec": "swaync-client -swb",
-      "on-click": "sleep 0.1 && swaync-client -t -sw",
-      "on-click-right": "sleep 0.1 && swaync-client -d -sw",
-      "escape": true
-    }
-    //
-    // EXTRAS
-    //
-    //  "temperature": {
-    //    "critical-threshold": 80,
-    //    "format": "{temperatureC}°C {icon}",
-    //    "format-icons": [
-    //      "",
-    //      "",
-    //      ""
-    //    ]
-    //  },
-    //  // Hardware info
-    //  "group/hardware": {
-    //    "orientation": "horizontal",
-    //    "modules": [
-    //      "disk",
-    //      "cpu",
-    //      "memory"
-    //    ]
-    //  },
-    //  "disk": {
-    //    "format": "{percentage_used}%  ",
-    //    "path": "/home"
-    //  },
-    //  "cpu": {
-    //    "format": " {usage}%  ",
-    //    "tooltip": false
-    //  },
-    //  "memory": {
-    //    "format": " {}%  "
-    //  }
-  }
+    },
+  },
+  "custom/notification": {
+    "tooltip": false,
+    "format": "{icon}",
+    "format-icons": {
+      // "notification": "<span foreground='red'><small><sup>⬤</sup></small></span>",
+      "notification": "",
+      "none": "",
+      "dnd-notification": "<span foreground='red'><small><sup>⬤</sup></small></span>",
+      "dnd-none": " ",
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "sleep 0.1 && swaync-client -t -sw",
+    "on-click-right": "sleep 0.1 && swaync-client -d -sw",
+    "escape": true,
+  },
+  //
+  // EXTRAS
+  //
+  //  "temperature": {
+  //    "critical-threshold": 80,
+  //    "format": "{temperatureC}°C {icon}",
+  //    "format-icons": [
+  //      "",
+  //      "",
+  //      ""
+  //    ]
+  //  },
+  //  // Hardware info
+  //  "group/hardware": {
+  //    "orientation": "horizontal",
+  //    "modules": [
+  //      "disk",
+  //      "cpu",
+  //      "memory"
+  //    ]
+  //  },
+  //  "disk": {
+  //    "format": "{percentage_used}%  ",
+  //    "path": "/home"
+  //  },
+  //  "cpu": {
+  //    "format": " {usage}%  ",
+  //    "tooltip": false
+  //  },
+  //  "memory": {
+  //    "format": " {}%  "
+  //  }
+}
