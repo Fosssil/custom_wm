@@ -34,16 +34,16 @@
 
   // Network setup
   "network": {
-    "format": "{ifname}",
+    "format": "\uf062 {bandwidthDownBytes} \uf063 {bandwidthUpBytes}",
+    //    "format-alt": "{ifname}",
     "on-click-right": "nm-applet --no-agent",
-    "format-wifi": "{essid} ({signalStrength}%)  ",
+    "format-alt": "{essid} ({signalStrength}%)  ",
     "format-ethernet": "{bandwidthDownBytes}  ",
     "format-disconnected": "Disconnected ⚠", //An empty format will hide the module.
     "tooltip-format": "{ifname} via {gwaddr} 󰊗",
     "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
     "tooltip-format-ethernet": "{ifname}  ",
     "tooltip-format-disconnected": "Disconnected",
-    "format-alt": "\uf062 {bandwidthDownBytes} \uf063 {bandwidthUpBytes}",
     "max-length": 50,
     "interval": 1,
   },

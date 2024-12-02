@@ -1,0 +1,39 @@
+MenuBar=Disabled
+
+[General]
+AutoExpandFolders=true
+GlobalViewProps=false
+RememberOpenedTabs=false
+ShowSpaceInfo=false
+Version=202
+ViewPropsTimestamp=2024,6,18,14,8,1.869
+
+[IconsMode]
+IconSize=48
+PreviewSize=144
+
+[InformationPanel]
+dateFormat=ShortFormat
+
+[KFileDialog Settings]
+Places Icons Auto-resize=false
+Places Icons Static Size=32
+
+[MainWindow]
+MenuBar=Disabled
+ToolBarsMovable=Disabled
+
+[MainWindow][Toolbar mainToolBar]
+ToolButtonStyle=IconOnly
+
+[PlacesPanel]
+IconSize=32
+
+[PreviewSettings]
+Plugins=ffmpegthumbnailer,appimagethumbnail,audiothumbnail,avif,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,heif,imagethumbnail,jpegthumbnail,jxl,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,opendocumentthumbnail,svgthumbnail,textthumbnail,ffmpegthumbs,gdk-pixbuf-thumbnailer,gsf-office
+
+[Toolbar mainToolBar]
+ToolButtonStyle=IconOnly
+
+[UiSettings]
+ColorScheme=MacSequoiaDark
