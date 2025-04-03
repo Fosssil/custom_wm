@@ -1,5 +1,5 @@
 /*
-*   This is written by fossil 
+* FOSSIL
 */
 
 /* Menu button */
@@ -23,9 +23,13 @@
 }
 
 /* Extensions button */
-/*#unified-extensions-button {
-  display: none !important
-}*/
+/*#unified-extensions-button {*/
+/*  display: none !important;*/
+/*}*/
+
+#reload-button {
+  display: none !important;
+}
 
 /* Extension name inside URL bar */
 #identity-box.extensionPage #identity-icon-label {
@@ -57,12 +61,12 @@
 
 /* Navbar size calc */
 :root {
-  --tab-border-radius: 6px !important;
+  --tab-border-radius: 4px !important;
   /*  Tab border radius -- Changes the tabs rounding  */
   /*  Default: 6px  */
-  --NavbarWidth: 43;
+  --NavbarWidth: 36;
   /*  Default values: 36 - 43  */
-  --TabsHeight: 36;
+  --TabsHeight: 30;
   /*  Minimum: 30  */
   /*  Default: 36  */
   --TabsBorder: 8;
