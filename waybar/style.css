@@ -1,7 +1,7 @@
 * {
   all: unset;
   /*this is really important to isolate waybar from gtk*/
-  font-family: "Monospace";
+  font-family: 'Monospace';
   font-size: 14px;
   font-weight: normal;
 }
@@ -10,7 +10,7 @@
 tooltip {
   background: rgba(0, 0, 0, 1);
   border: 1.5px solid #9a4c42;
-  border-radius: 8px;
+  border-radius: 4px;
   padding: 2px 100px;
 }
 
@@ -33,14 +33,16 @@ tooltip {
   background: rgba(0, 0, 0, 0.5);
   margin: 1px 2px;
   padding: 1px;
-  border-radius: 15px;
+  /* border-radius: 15px; */
+  border-radius: 2px;
 }
 
 #workspaces button {
   background: rgba(0, 0, 0, 0.5);
   min-width: 20px;
   margin: 2px;
-  border-radius: 45%;
+  /*  border-radius: 45%; */
+  border-radius: 2px;
   /* circle */
   transition: all 0.2s ease-in-out;
   padding: 1px;
@@ -60,7 +62,8 @@ tooltip {
   background-color: rgb(255, 255, 255);
   color: black;
   min-width: 30px;
-  border-radius: 10px;
+  /*border-radius: 10px;*/
+  border-radius: 2px;
   transition: all 0.2s ease-in-out;
   opacity: 0.9;
 }
@@ -160,5 +163,5 @@ tooltip {
 
 #custom-notification:hover {
   background-color: rgba(255, 255, 255, 0.485);
-  color: black;
+  color: white;
 }

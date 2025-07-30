@@ -237,10 +237,10 @@
   display: -moz-box !important;
 }
 
-.titlebar-spacer[type="pre-tabs"] {
+.titlebar-spacer[type='pre-tabs'] {
   display: none;
 }
 
-#statuspanel:not([type="overLink"]) {
+#statuspanel:not([type='overLink']) {
   display: none !important;
 }

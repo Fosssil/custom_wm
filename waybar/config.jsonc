@@ -4,9 +4,11 @@
   "width": 1920, // Waybar width
   "spacing": 1, // Gaps between modules (4px)
   "modules-left": [
-    "hyprland/workspaces", 
+    "hyprland/workspaces",
   ],
-    "modules-center": ["cava"],
+  "modules-center": [
+    "cava"
+  ],
   "modules-right": [
     "pulseaudio#speaker",
     "network",
@@ -33,7 +35,6 @@
       "()": "Fossil",
     },
   },
-
   // Network setup
   "network": {
     "format": "\uf062 {bandwidthDownBytes} \uf063 {bandwidthUpBytes}",
@@ -59,7 +60,6 @@
     "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
     "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
   },
-
   // // Audio setup
   // "pulseaudio": {
   //   "format": "{volume}% {icon}",
@@ -82,16 +82,20 @@
   "pulseaudio#speaker": {
     "format": "{volume}% {icon} ",
     "format-muted": "",
-    "on-click": "pamixer -t",
+    // "on-click": "pamixer -t",
     "on-click-right": "pavucontrol",
-    "on-scroll-up": "pamixer -i 5",
-    "on-scroll-down": "pamixer -d 5",
+    // "on-scroll-up": "pamixer -i 5",
+    // "on-scroll-down": "pamixer -d 5",
     "scroll-step": 5,
     "format-icons": {
       "headphone": "",
       "hands-free": "",
       "headset": "",
-      "default": ["", "", ""],
+      "default": [
+        "",
+        "",
+        ""
+      ],
     },
   },
   //    "pulseaudio#microphone": {
@@ -108,7 +112,17 @@
   "backlight": {
     "scroll-step": 5,
     "format": "{percent}% {icon}",
-    "format-icons": ["", "", "", "", "", "", "", "", ""],
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
   },
   "battery": {
     "states": {
@@ -116,13 +130,19 @@
       "warning": 40,
       "critical": 20,
     },
-    "interval": 2,
-    "full-at": 79,
+    "interval": 30,
+    "full-at": 100,
     "format": "{icon} {capacity}%",
     "format-charging": "{capacity}% ",
     "format-plugged": "{capacity}% ",
     "format-alt": "{icon} {time}",
-    "format-icons": ["", "", "", "", ""],
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
   },
   // Clock
   "clock": {
@@ -147,7 +167,7 @@
     "format": "{icon}",
     "format-icons": {
       // "notification": "<span foreground='red'><small><sup>⬤</sup></small></span>",
-      "notification": "",
+      "notification": "<span foreground='red'></span>",
       "none": "",
       "dnd-notification": "<span foreground='red'><small><sup>⬤</sup></small></span>",
       "dnd-none": " ",
@@ -159,27 +179,35 @@
     "on-click-right": "sleep 0.1 && swaync-client -d -sw",
     "escape": true,
   },
-
   "cava": {
-        "cava_config": "/home/fossil/.config/cava/config",
-        "framerate": 60,
-        "autosens": 1,
-        "bars": 20,
-        "lower_cutoff_freq": 50,
-        "higher_cutoff_freq": 10000,
-        "sleep_timer": 5,
-        "hide_on_silence": true,
-        "method": "pipewire",
-        "source": "auto",
-        "stereo": true,
-        "reverse": false,
-        "bar_delimiter": 0,
-        "monstercat": true,
-        "waves": true,
-        "noise_reduction": 0.5,
-        "input_delay": 0,
-        "format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
-    },
+    //        "cava_config": "/home/fossil/.config/cava/config",
+    "framerate": 60,
+    "autosens": 1,
+    "bars": 20,
+    "lower_cutoff_freq": 50,
+    "higher_cutoff_freq": 10000,
+    "sleep_timer": 5,
+    "hide_on_silence": true,
+    "method": "pipewire",
+    "source": "auto",
+    "stereo": true,
+    "reverse": false,
+    "bar_delimiter": 0,
+    "monstercat": true,
+    "waves": true,
+    "noise_reduction": 0.5,
+    "input_delay": 0,
+    "format-icons": [
+      "▁",
+      "▂",
+      "▃",
+      "▄",
+      "▅",
+      "▆",
+      "▇",
+      "█"
+    ],
+  },
   //
   // EXTRAS
   //
