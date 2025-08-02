@@ -1,193 +1,47 @@
 {
-  "font": "UbuntuMono Nerd Font",
+  "font": "RecMonoLinear Nerd Font",
   "reload_style_on_change": true,
-  "width": 1920, // Waybar width
-  "spacing": 1, // Gaps between modules (4px)
+  "width": 1920,
+  "spacing": 1,
   "modules-left": [
-    "hyprland/workspaces",
+    "hyprland/workspaces"
   ],
   "modules-center": [
     "cava"
   ],
   "modules-right": [
-    "pulseaudio#speaker",
+    "pulseaudio#microphone",
     "network",
-    "bluetooth",
-    "battery",
+    "group/hardware",
+    // "bluetooth",
     "backlight",
+    "pulseaudio#speaker",
+    "battery",
     "clock",
-    "custom/notification",
+    "custom/notification"
   ],
-  // Hyprland
+  //////////////
+  // Hyprland //
+  /////////////
   "hyprland/workspaces": {
     "disable-scroll": true,
     "sort-by": "number",
     "all-outputs": true,
     "warp-on-scroll": false,
-    "format": "{icon}",
+    "format": "{icon}"
   },
-  "hyprland/window": {
-    "format": "{title}",
-    "icon": false,
-    "max-length": 40,
-    "separate-outputs": true,
-    "rewrite": {
-      "()": "Fossil",
-    },
-  },
-  // Network setup
-  "network": {
-    "format": "\uf062 {bandwidthDownBytes} \uf063 {bandwidthUpBytes}",
-    //    "format-alt": "{ifname}",
-    "on-click-right": "nm-applet --no-agent",
-    "format-alt": "{essid} ({signalStrength}%)  ",
-    "format-ethernet": "{bandwidthDownBytes}  ",
-    "format-disconnected": "Disconnected ⚠", //An empty format will hide the module.
-    "tooltip-format": "{ifname} via {gwaddr} 󰊗",
-    "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
-    "tooltip-format-ethernet": "{ifname}  ",
-    "tooltip-format-disconnected": "Disconnected",
-    "max-length": 50,
-    "interval": 1,
-  },
-  "bluetooth": {
-    // "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
-    "format": "",
-    "format-disabled": "󰂲", // an empty format will hide the module
-    "format-connected": " {device_alias}",
-    "on-click-right": "blueman-manager",
-    "tooltip-format": "{controller_alias}\t{controller_address}",
-    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
-    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
-  },
-  // // Audio setup
-  // "pulseaudio": {
-  //   "format": "{volume}% {icon}",
-  //   "format-bluetooth": "{volume}% {icon} {format_source}",
-  //   "format-bluetooth-muted": " {icon} {format_source}",
-  //   "format-muted": " 󰝟  {format_source}",
-  //   "format-source": "{volume}% ",
-  //   "format-source-muted": "",
-  //   "format-icons": {
-  //     "default": [
-  //       "",
-  //       " ",
-  //       " "
-  //     ]
-  //   },
-  //   "max-volume": 100,
-  //   "on-click": "pamixer -t",
-  //   "on-click-right": "pavucontrol"
-  // },
-  "pulseaudio#speaker": {
-    "format": "{volume}% {icon} ",
-    "format-muted": "",
-    // "on-click": "pamixer -t",
-    "on-click-right": "pavucontrol",
-    // "on-scroll-up": "pamixer -i 5",
-    // "on-scroll-down": "pamixer -d 5",
-    "scroll-step": 5,
-    "format-icons": {
-      "headphone": "",
-      "hands-free": "",
-      "headset": "",
-      "default": [
-        "",
-        "",
-        ""
-      ],
-    },
-  },
-  //    "pulseaudio#microphone": {
-  //        "format": "{format_source}",
-  //        "format-source": "{volume}% ",
-  //        "format-source-muted": "",
-  //              "on-click": "pamixer --default-source -t",
-  //        "on-click-right": "pavucontrol",
-  //        "on-scroll-up": "pamixer --default-source -i 5",
-  //        "on-scroll-down": "pamixer --default-source -d 5",
-  //        "scroll-step": 5
-  //    },
-  //
-  "backlight": {
-    "scroll-step": 5,
-    "format": "{percent}% {icon}",
-    "format-icons": [
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      ""
-    ],
-  },
-  "battery": {
-    "states": {
-      "good": 80,
-      "warning": 40,
-      "critical": 20,
-    },
-    "interval": 30,
-    "full-at": 100,
-    "format": "{icon} {capacity}%",
-    "format-charging": "{capacity}% ",
-    "format-plugged": "{capacity}% ",
-    "format-alt": "{icon} {time}",
-    "format-icons": [
-      "",
-      "",
-      "",
-      "",
-      ""
-    ],
-  },
-  // Clock
-  "clock": {
-    "format": "󱑂 {:%I:%M}", // 19:28 Mon
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format-alt": "󰨳 {:%d %b %Y}", // 25 Dec 2006
-    "timezone": "Asia/Kolkata",
-    "calendar": {
-      "mode": "month",
-      "mode-mon-col": 3,
-      "format": {
-        "months": "<span color='#ffead3'><b>{}</b></span>",
-        "days": "<span color='#ffffff'><b>{}</b></span>",
-        "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
-        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
-        "today": "<span color='red'><b><u>{}</u></b></span>",
-      },
-    },
-  },
-  "custom/notification": {
-    "tooltip": false,
-    "format": "{icon}",
-    "format-icons": {
-      // "notification": "<span foreground='red'><small><sup>⬤</sup></small></span>",
-      "notification": "<span foreground='red'></span>",
-      "none": "",
-      "dnd-notification": "<span foreground='red'><small><sup>⬤</sup></small></span>",
-      "dnd-none": " ",
-    },
-    "return-type": "json",
-    "exec-if": "which swaync-client",
-    "exec": "swaync-client -swb",
-    "on-click": "sleep 0.1 && swaync-client -t -sw",
-    "on-click-right": "sleep 0.1 && swaync-client -d -sw",
-    "escape": true,
-  },
+  //////////
+  // Cava //
+  //////////
   "cava": {
-    //        "cava_config": "/home/fossil/.config/cava/config",
+    "cava_config": "/home/fossil/.config/cava/config",
     "framerate": 60,
     "autosens": 1,
     "bars": 20,
     "lower_cutoff_freq": 50,
     "higher_cutoff_freq": 10000,
-    "sleep_timer": 5,
-    "hide_on_silence": false,
+    "sleep_timer": 3,
+    "hide_on_silence": true,
     "method": "pipewire",
     "source": "auto",
     "stereo": true,
@@ -206,38 +60,211 @@
       "▆",
       "▇",
       "█"
-    ],
+    ]
   },
-  //
-  // EXTRAS
-  //
-  //  "temperature": {
-  //    "critical-threshold": 80,
-  //    "format": "{temperatureC}°C {icon}",
-  //    "format-icons": [
-  //      "",
-  //      "",
-  //      ""
-  //    ]
-  //  },
-  //  // Hardware info
-  //  "group/hardware": {
-  //    "orientation": "horizontal",
-  //    "modules": [
-  //      "disk",
-  //      "cpu",
-  //      "memory"
-  //    ]
-  //  },
-  //  "disk": {
-  //    "format": "{percentage_used}%  ",
-  //    "path": "/home"
-  //  },
-  //  "cpu": {
-  //    "format": " {usage}%  ",
-  //    "tooltip": false
-  //  },
-  //  "memory": {
-  //    "format": " {}%  "
-  //  }
+  ///////////////////
+  // Network setup //
+  //////////////////
+  "network": {
+    "format": "\uf063 {bandwidthDownBytes} \uf062 {bandwidthUpBytes}",
+    "format-ethernet": "  {bandwidthDownBytes}  {bandwidthUpBytes}",
+    "format-disconnected": " Disconnected",
+    "tooltip-format-wifi": "  {essid} ({signalStrength}%)",
+    "tooltip-format-ethernet": "  {ifname}",
+    "max-length": 50,
+    "interval": 1
+  },
+  ///////////////
+  // Bluetooth //
+  ///////////////
+  "bluetooth": {
+    "format": "󰂯",
+    "format-disabled": "󰂲",
+    "format-connected": " {device_alias}",
+    "on-click-right": "blueman-manager",
+    "tooltip-format": "{controller_alias}\t{controller_address}",
+    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
+  },
+  ////////////////
+  // Backlight ///  
+  ////////////////
+  "backlight": {
+    "scroll-step": 5,
+    "format": "{icon} {percent}",
+    "tooltip": false,
+    "format-icons": [
+      "󰛩",
+      "󱩎",
+      "󱩏",
+      "󱩐",
+      "󱩑",
+      "󱩒",
+      "󱩓",
+      "󱩔",
+      "󱩕",
+      "󱩖",
+      "󰛨"
+    ]
+  },
+  /////////////////
+  // Audio setup // 
+  //////////////// 
+  "pulseaudio#speaker": {
+    "format": "{icon}  {volume}",
+    "format-muted": "",
+    "on-click": "pamixer -t",
+    "on-click-right": "pavucontrol",
+    "scroll-step": 5,
+    "tooltip": false,
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "default": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    }
+  },
+  "pulseaudio#microphone": {
+    "format": "{format_source}",
+    "format-source": "",
+    "format-source-muted": "",
+    "on-click": "pamixer --default-source -t",
+    "on-click-right": "pavucontrol",
+    "on-scroll-up": "pamixer --default-source -i 5",
+    "on-scroll-down": "pamixer --default-source -d 5",
+    "scroll-step": 5
+  },
+  //////////////
+  // Battery ///  
+  //////////////
+  "battery": {
+    "states": {
+      "good": 80,
+      "warning": 40,
+      "critical": 20
+    },
+    "interval": 1,
+    "full-at": 100,
+    "format": "{icon} {capacity}%",
+    "format-charging": "{icon} {capacity}%",
+    "format-alt": "{icon} {time}",
+    "tooltip": false,
+    "format-icons": {
+      "default": [
+        "󰂎",
+        "󰁺",
+        "󰁻",
+        "󰁼",
+        "󰁽",
+        "󰁾",
+        "󰁿",
+        "󰂀",
+        "󰂁",
+        "󰂂",
+        "󰁹"
+      ],
+      "charging": [
+        "󰢟",
+        "󰢜",
+        "󰂆",
+        "󰂇",
+        "󰂈",
+        "󰢝",
+        "󰂉",
+        "󰂉",
+        "󰢞",
+        "󰂊",
+        "󰂋",
+        "󰂅"
+      ]
+    }
+  },
+  // Clock
+  "clock": {
+    "format": "󱑂 {:%I:%M}", // 19:28 Mon
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format-alt": "󰨳 {:%d %b %Y}", // 25 Dec 2006
+    "timezone": "Asia/Kolkata",
+    "calendar": {
+      "mode": "year",
+      "mode-mon-col": 3,
+      "format": {
+        "months": "<span color='#cba6f7'>{}</span>", // Mauve for month names
+        "days": "<span color='#cdd6f4'>{}</span>", // Text for days
+        "weeks": "<span color='#f9e2af'>W{}</span>", // Yellow for week numbers
+        "weekdays": "<span color='#fab387'>{}</span>", // Peach for weekdays
+        "today": "<span color='#11111b' bgcolor='#f38ba8'><b><u>{}</u></b></span>" // Maroon with Surface0 background for today
+      }
+    },
+    "format-icons": [
+      "󱐿",
+      "󱑀",
+      "󱑁",
+      "󱑂",
+      "󱑃",
+      "󱑄",
+      "󱑅",
+      "󱑆",
+      "󱑇",
+      "󱑈",
+      "󱑉",
+      "󱑊"
+    ]
+  },
+  ///////////////////
+  // Notification // 
+  /////////////////
+  "custom/notification": {
+    "tooltip": false,
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "<span foreground='red'></span>",
+      "none": "",
+      "dnd-notification": "<span foreground='red'><small><sup>⬤</sup></small></span>",
+      "dnd-none": " "
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "sleep 0.1 && swaync-client -t -sw",
+    "on-click-right": "sleep 0.1 && swaync-client -d -sw",
+    "escape": true
+  },
+  // Hardware info
+  "group/hardware": {
+    "orientation": "horizontal",
+    "modules": [
+      "temperature",
+      "memory",
+      "cpu"
+    ]
+  },
+  "temperature": {
+    "critical-threshold": 80,
+    "interval": 5,
+    "format": " {icon} {temperatureC}°C",
+    "tooltip": false,
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  "memory": {
+    "format": "   {}%",
+    "interval": 1
+  },
+  "cpu": {
+    "format": "   {usage}%",
+    "interval": 1,
+    // "tooltip": false
+  }
 }
