@@ -13,7 +13,6 @@
     "pulseaudio#microphone",
     "network",
     "group/hardware",
-    // "bluetooth",
     "backlight",
     "pulseaudio#speaker",
     "battery",
@@ -22,7 +21,7 @@
   ],
   //////////////
   // Hyprland //
-  /////////////
+  //////////////
   "hyprland/workspaces": {
     "disable-scroll": true,
     "sort-by": "number",
@@ -64,7 +63,7 @@
   },
   ///////////////////
   // Network setup //
-  //////////////////
+  ///////////////////
   "network": {
     "format": "\uf063 {bandwidthDownBytes} \uf062 {bandwidthUpBytes}",
     "format-ethernet": "  {bandwidthDownBytes}  {bandwidthUpBytes}",
@@ -109,7 +108,7 @@
   },
   /////////////////
   // Audio setup // 
-  //////////////// 
+  ///////////////// 
   "pulseaudio#speaker": {
     "format": "{icon}  {volume}",
     "format-muted": "",
@@ -140,9 +139,9 @@
     "on-scroll-down": "pamixer --default-source -d 5",
     "scroll-step": 5
   },
-  //////////////
-  // Battery ///  
-  //////////////
+  /////////////
+  // Battery //   
+  /////////////
   "battery": {
     "states": {
       "good": 80,
@@ -185,7 +184,9 @@
       ]
     }
   },
-  // Clock
+  ///////////
+  // Clock // 
+  ///////////
   "clock": {
     "format": "󱑂 {:%I:%M}", // 19:28 Mon
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
@@ -195,11 +196,11 @@
       "mode": "year",
       "mode-mon-col": 3,
       "format": {
-        "months": "<span color='#cba6f7'>{}</span>", // Mauve for month names
-        "days": "<span color='#cdd6f4'>{}</span>", // Text for days
-        "weeks": "<span color='#f9e2af'>W{}</span>", // Yellow for week numbers
-        "weekdays": "<span color='#fab387'>{}</span>", // Peach for weekdays
-        "today": "<span color='#11111b' bgcolor='#f38ba8'><b><u>{}</u></b></span>" // Maroon with Surface0 background for today
+        "months": "<span color='#cba6f7'>{}</span>",
+        "days": "<span color='#cdd6f4'>{}</span>",
+        "weeks": "<span color='#f9e2af'>W{}</span>",
+        "weekdays": "<span color='#fab387'>{}</span>",
+        "today": "<span color='#11111b' bgcolor='#f38ba8'><b><u>{}</u></b></span>"
       }
     },
     "format-icons": [
@@ -217,9 +218,9 @@
       "󱑊"
     ]
   },
-  ///////////////////
-  // Notification // 
-  /////////////////
+  //////////////////
+  // Notification //  
+  //////////////////
   "custom/notification": {
     "tooltip": false,
     "format": "{icon}",
@@ -236,7 +237,9 @@
     "on-click-right": "sleep 0.1 && swaync-client -d -sw",
     "escape": true
   },
-  // Hardware info
+  ///////////////////
+  // Hardware info // 
+  ///////////////////
   "group/hardware": {
     "orientation": "horizontal",
     "modules": [
@@ -264,7 +267,6 @@
   },
   "cpu": {
     "format": "   {usage}%",
-    "interval": 1,
-    // "tooltip": false
+    "interval": 1
   }
 }

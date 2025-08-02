@@ -149,8 +149,6 @@ tooltip label {
 #pulseaudio {
   background-color: @surface0;
   margin: 1px 1px;
-  /* padding: 0px; */
-  /* border-radius: 15px; */
   border: 2px solid alpha(@crust, 0.3);
   border-radius: 20px;
 }
@@ -209,9 +207,6 @@ tooltip label {
 #battery.plugged {
   color: alpha(@green, 0.9);
   border: 2px dotted alpha(@green, 0.5);
-  /* border-width: 2px; */
-  /* animation: charging-border 2s ease-in-out infinite alternate; */
-  /* animation-timing-function: steps(24); */
 }
 
 #battery.discharging {
@@ -233,7 +228,6 @@ tooltip label {
   color: alpha(@red, 0.9);
   border-width: 2px;
   animation: discharging-border 1s ease-in-out infinite alternate;
-  /* animation-timing-function: steps(12);  */
 }
 
 #battery:hover {
@@ -266,9 +260,4 @@ tooltip label {
   border-radius: 100px;
   padding-right: 6px;
   padding-left: 1px;
-}
-
-#custom-notification:hover {
-  background-color: rgba(255, 255, 255, 0.485);
-  color: white;
 }
