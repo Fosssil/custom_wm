@@ -1,39 +1,28 @@
-MenuBar=Disabled
-
 [General]
 AutoExpandFolders=true
+EditableUrl=true
 GlobalViewProps=false
 RememberOpenedTabs=false
-ShowSpaceInfo=false
+ShowFullPath=true
+ShowFullPathInTitlebar=true
+ShowToolTips=true
+UseTabForSwitchingSplitView=true
 Version=202
-ViewPropsTimestamp=2024,6,18,14,8,1.869
+ViewPropsTimestamp=2025,4,4,1,14,48.084
 
 [IconsMode]
-IconSize=48
+IconSize=64
 PreviewSize=144
-
-[InformationPanel]
-dateFormat=ShortFormat
 
 [KFileDialog Settings]
 Places Icons Auto-resize=false
-Places Icons Static Size=32
+Places Icons Static Size=22
 
 [MainWindow]
 MenuBar=Disabled
-ToolBarsMovable=Disabled
-
-[MainWindow][Toolbar mainToolBar]
-ToolButtonStyle=IconOnly
-
-[PlacesPanel]
-IconSize=32
 
 [PreviewSettings]
-Plugins=ffmpegthumbnailer,appimagethumbnail,audiothumbnail,avif,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,heif,imagethumbnail,jpegthumbnail,jxl,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,opendocumentthumbnail,svgthumbnail,textthumbnail,ffmpegthumbs,gdk-pixbuf-thumbnailer,gsf-office
-
-[Toolbar mainToolBar]
-ToolButtonStyle=IconOnly
+Plugins=appimagethumbnail,audiothumbnail,blenderthumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,imagethumbnail,jpegthumbnail,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,mobithumbnail,opendocumentthumbnail,gsthumbnail,rawthumbnail,svgthumbnail,textthumbnail,ffmpegthumbs,gdk-pixbuf-thumbnailer
 
 [UiSettings]
-ColorScheme=MacSequoiaDark
+ColorScheme=catppuccin-mocha-mauve
